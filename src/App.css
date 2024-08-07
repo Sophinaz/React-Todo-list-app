@@ -1,0 +1,21 @@
+*{
+  background-color: white;
+}
+
+.container{
+  width: 40%;
+  height: fit-content;
+  margin-top: 3em;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.title{
+  margin: auto;
+}
