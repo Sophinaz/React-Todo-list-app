@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+<h1>Description</h1>
+This is a todo list app which lets you add tasks to do and delete them after they are completed.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The page without adding any tasks looks like this:
 
-Currently, two official plugins are available:
+![Screenshot (141)](https://github.com/user-attachments/assets/7d1e90f2-597a-4fda-82db-28e599c6dc28)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+We can add tasks by writing on the space given and by clicking the add task button.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+![Screenshot (142)](https://github.com/user-attachments/assets/45cde56d-babe-4e64-a6cd-5ec87d318ba0)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+If we didnt enter any tasks and hit the button it will alert us to enter a task.
+
+![Screenshot (143)](https://github.com/user-attachments/assets/91b84553-06b8-4ea8-9788-266f6905d86c)
+
+
+
+We can also delete tasks by hitting the delete button.
+
+![Screenshot (144)](https://github.com/user-attachments/assets/25897b29-2e8a-4c7c-a713-df34ba017120)
+
+
+We can also edit an exisisting task by hitting edit.
+
+![Screenshot (145)](https://github.com/user-attachments/assets/9656c545-26f1-4812-b2cd-293d7c876a66)
+
+
+![Screenshot (146)](https://github.com/user-attachments/assets/20d90571-abea-4963-81e7-76be433dbaec)
+
