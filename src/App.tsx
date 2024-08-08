@@ -6,6 +6,7 @@ import List from './Components/List/List';
 interface Tasks{
   text: string
   id: number
+  isEditing: boolean
 }
 
 var nextid = 0
@@ -16,8 +17,9 @@ function App() {
 
   const Add = (taskName: string) => {
     if (taskName){
-    setTask([...tasks, {text: taskName, id: nextid}])
+    setTask([...tasks, {text: taskName, id: nextid, isEditing: false}])
     nextid = nextid + 1
+    
   } else{
     alert('Please insert a task.')
   }
@@ -27,11 +29,17 @@ function App() {
     setTask(tasks.filter((t) => t.id !== task.id))
   }
 
-  const Edit = (task: Tasks) => {
-    const newtask = prompt("What is you new task? ")
-    if (newtask){
-      task.text = newtask  
+  const toggle = (task:Tasks) => {
+    task.isEditing = !task.isEditing
+    console.log(task, task.isEditing)
     setTask(tasks.map((t) => t.id === task.id ? task : t))}
+  
+
+  const Edit = (task: Tasks) => {
+    if (task){
+      console.log(task)
+    setTask(tasks.map((t) => t.id === task.id ? task : t))}
+    task.isEditing = false
   }
 
   return (
@@ -39,9 +47,8 @@ function App() {
   `   <h1 className='title'>Mydo app</h1>
       <div className='container'>
         <Addtask onAdd={Add}/>
-        <List tasks={tasks} edit={Edit} del={Del} />
-      </div>`
-      
+        <List tasks={tasks} toggle={toggle} del={Del} edit={Edit} />
+      </div>`    
     </div>
   )
 }

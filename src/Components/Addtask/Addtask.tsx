@@ -16,10 +16,14 @@ const Addtask = ({onAdd}: Props) => {
 
   return (
     <div className='add'>
-        <input type="text" placeholder='Add task' onChange={(e) => {
+        <input type="text" value={taskName} placeholder='Add task' onChange={(e) => {
           setTaskname(e.target.value)
           }}/>
-        <Button click={() => onAdd(taskName)} name='Add Task'/>
+        <Button click={() => {
+          onAdd(taskName)
+          setTaskname("")
+        }
+          } name='Add Task'/>
     </div>
   )
 }
